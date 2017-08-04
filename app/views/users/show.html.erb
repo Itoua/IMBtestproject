@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+<div class= "container">
+	<div>
+		<p><b>Name:</b> <%= @user.name %></p>
+	</div>
+
+	<div>
+		<p><b>Surname:</b> <%= @user.surname %></p>
+	</div>
+
+	<div>
+		<p><b>Email:</b> <%= @user.email %></p>
+	</div>
+
+	<div>
+		<p><b>Mobile number:</b> <%= @user.mobile_number %></p>
+	</div>
+	<div>
+		<p><b>Admin:</b> <%= @user.admin %></p>
+	</div>
+	<div>
+	  <% if policy(@user).update? %>
+	  	<span class="btn btn-default"><%= link_to 'Edit', edit_user_path(@user) %></span>
+	  <% end %>
+	  <span class="btn btn-default"><%= link_to 'Back', users_path %></span>
+	</div>
+</div>
+
+

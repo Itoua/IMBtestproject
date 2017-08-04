@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+	<div>
+		<p>
+		  <strong>Name:</strong>
+		  <%= @photo.name %>
+		</p>
+	</div>
+	<div>
+		<p>
+		  <strong>Image:</strong>
+		  <%= image_tag attachment_url(@photo, :image, :fill, 100, 100, format: "jpg") %>
+		</p>
+	</div>
+	<div>
+		<p>
+			<strong>Public:</strong>
+			<%= @photo.public_view %>
+		</p>
+	<span class="btn btn-default"><%= link_to 'Edit', edit_photo_path(@photo) %> </span>
+	<span class="btn btn-default"><%= link_to 'Back', photos_path %></span>
+	</div>
+</div>
+
+
